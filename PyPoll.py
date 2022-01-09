@@ -64,7 +64,11 @@ with open(file_to_save,"w") as txt_file:
         votes = candidate_votes[candidate_name]
     # 4. The percentage of votes each candidate won
         vote_percentage = float(votes) / float(total_votes)*100
-        #print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,}) of the total vote\n")
+        candidate_results=(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,}) of the total vote\n")
+        #print each candidate and their results to text file
+        print(candidate_results)
+        # Save the candidate results to the text file
+        txt_file.write(candidate_results)
     
     # 5. The winner of the election base on popular vote
         # Determine winning count and percentage
@@ -80,6 +84,7 @@ with open(file_to_save,"w") as txt_file:
         f"WInning Percentage: {winning_percentage:.1f}%\n"
         f"-----------------------------\n")
     print(winning_candidate_summary)
+    txt_file.write(winning_candidate_summary)
 
 
 
