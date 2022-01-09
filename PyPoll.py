@@ -15,6 +15,8 @@ file_to_save = os.path.join("analysis", "election_analysis.txt")
 total_votes = 0
 # Declare candidate list
 candidate_options = []
+# Declare Vot Count Dictionary
+candidate_votes = {}
 
 # Open the election results and read the file
 with open(file_to_load) as election_data:
@@ -35,11 +37,28 @@ with open(file_to_load) as election_data:
         if candidate_name not in candidate_options:
             candidate_options.append(candidate_name)
 
+            # Start Tracking votes
+            candidate_votes[candidate_name] = 0
+
+        # Add votes to each candidate
+        candidate_votes[candidate_name] += 1
+
 # Print total Votes
 print(total_votes)
 
 #Print the candidate list
 print(candidate_options)
+
+# Print Candidate Votes
+print(candidate_votes)
+
+# Find percantage of votes and print
+for candidate_name in candidate_votes:
+        votes = candidate_votes[candidate_name]
+        vote_percentage = float(votes) / float(total_votes)*100
+        print(f"{candidate_name} received {vote_percentage:.1f}% of the vote.")
+
+
 
 # To do: perform analysis
 
