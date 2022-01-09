@@ -17,6 +17,10 @@ total_votes = 0
 candidate_options = []
 # Declare Vot Count Dictionary
 candidate_votes = {}
+# Winning Candidae and Winning Count tracker
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
 
 # Open the election results and read the file
 with open(file_to_load) as election_data:
@@ -44,21 +48,33 @@ with open(file_to_load) as election_data:
         candidate_votes[candidate_name] += 1
 
 # Print total Votes
-print(total_votes)
+#print(total_votes)
 
 #Print the candidate list
-print(candidate_options)
+#print(candidate_options)
 
 # Print Candidate Votes
-print(candidate_votes)
+#print(candidate_votes)
 
 # Find percantage of votes and print
 for candidate_name in candidate_votes:
-        votes = candidate_votes[candidate_name]
-        vote_percentage = float(votes) / float(total_votes)*100
-        print(f"{candidate_name} received {vote_percentage:.1f}% of the vote.")
+    votes = candidate_votes[candidate_name]
+    vote_percentage = float(votes) / float(total_votes)*100
+    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,}) of the total vote ({total_votes})\n")
 
-
+    # Determine winning count and percentage
+    if votes > winning_count and vote_percentage > winning_percentage:
+        winning_count = votes
+        winning_percentage = vote_percentage
+        # Determine Winniing name
+        winning_candidate = candidate_name
+winning_candidate_summary = (
+    f"-----------------------------\n"
+    f"Winner: {winning_candidate}\n"
+    f"Winning vote count: {winning_count:,}\n"
+    f"WInning Percentage: {winning_percentage:.1f}%\n"
+    f"-----------------------------\n")
+print(winning_candidate_summary)
 
 # To do: perform analysis
 
