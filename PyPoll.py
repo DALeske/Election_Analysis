@@ -48,28 +48,38 @@ with open(file_to_load) as election_data:
 
         # Add votes to each candidate
         candidate_votes[candidate_name] += 1
+# save the results to a text file
+with open(file_to_save,"w") as txt_file:
+    election_results = (f"\nElection Results\n"
+    f"--------------------------\n"
+    f"Total Votes: {total_votes:,}\n"
+    f"--------------------------\n")
+    print(election_results, end="")
+    # save the final vote countot the text file.
+    txt_file.write(election_results)
 
-# 3. The total nuumber of votes each candidate won
-# Find percantage of votes and print
-for candidate_name in candidate_votes:
-    votes = candidate_votes[candidate_name]
-# 4. The percentage of votes each candidate won
-    vote_percentage = float(votes) / float(total_votes)*100
-    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,}) of the total vote ({total_votes})\n")
-# 5. The winner of the election base on popular vote
-    # Determine winning count and percentage
-    if votes > winning_count and vote_percentage > winning_percentage:
-        winning_count = votes
-        winning_percentage = vote_percentage
-        # Determine Winniing name
-        winning_candidate = candidate_name
-winning_candidate_summary = (
-    f"-----------------------------\n"
-    f"Winner: {winning_candidate}\n"
-    f"Winning vote count: {winning_count:,}\n"
-    f"WInning Percentage: {winning_percentage:.1f}%\n"
-    f"-----------------------------\n")
-print(winning_candidate_summary)
+    # 3. The total nuumber of votes each candidate won
+    # Find percantage of votes and print
+    for candidate_name in candidate_votes:
+        votes = candidate_votes[candidate_name]
+    # 4. The percentage of votes each candidate won
+        vote_percentage = float(votes) / float(total_votes)*100
+        #print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,}) of the total vote\n")
+    
+    # 5. The winner of the election base on popular vote
+        # Determine winning count and percentage
+        if votes > winning_count and vote_percentage > winning_percentage:
+            winning_count = votes
+            winning_percentage = vote_percentage
+            # Determine Winniing name
+            winning_candidate = candidate_name
+    winning_candidate_summary = (
+        f"-----------------------------\n"
+        f"Winner: {winning_candidate}\n"
+        f"Winning vote count: {winning_count:,}\n"
+        f"WInning Percentage: {winning_percentage:.1f}%\n"
+        f"-----------------------------\n")
+    print(winning_candidate_summary)
 
 
 
