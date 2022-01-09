@@ -10,7 +10,7 @@ The Colorado Board of Elections has asked for a summary of the recent election a
 5. Determinne the winner of congressional election base on the popular vote
 
 ## Resources
-- Data Source: elctions_results.csv (Provided by the Colorado Board of Elections)
+- Data Source: elections_results.csv (Provided by the Colorado Board of Elections)
 - Software: 
   -Python version 3.9.7
   -Visual Studio Code version 1.63.2
