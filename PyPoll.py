@@ -22,6 +22,7 @@ winning_candidate = ""
 winning_count = 0
 winning_percentage = 0
 
+# 1. The total number of votes cast
 # Open the election results and read the file
 with open(file_to_load) as election_data:
     file_reader = csv.reader(election_data)
@@ -34,6 +35,7 @@ with open(file_to_load) as election_data:
         # Add to the total vote  count
         total_votes += 1  # alternate total_votes = total_votes + 1
 
+# 2. A complete list of candidates who received votes
         # Print candidate name from each row
         candidate_name = row[2]
 
@@ -47,21 +49,14 @@ with open(file_to_load) as election_data:
         # Add votes to each candidate
         candidate_votes[candidate_name] += 1
 
-# Print total Votes
-#print(total_votes)
-
-#Print the candidate list
-#print(candidate_options)
-
-# Print Candidate Votes
-#print(candidate_votes)
-
+# 3. The total nuumber of votes each candidate won
 # Find percantage of votes and print
 for candidate_name in candidate_votes:
     votes = candidate_votes[candidate_name]
+# 4. The percentage of votes each candidate won
     vote_percentage = float(votes) / float(total_votes)*100
     print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,}) of the total vote ({total_votes})\n")
-
+# 5. The winner of the election base on popular vote
     # Determine winning count and percentage
     if votes > winning_count and vote_percentage > winning_percentage:
         winning_count = votes
@@ -76,22 +71,12 @@ winning_candidate_summary = (
     f"-----------------------------\n")
 print(winning_candidate_summary)
 
-# To do: perform analysis
-
-
-# 1. The total number of votes cast
-# 2. A complete list of candidates who received votes
-# 3. The total nuumber of votes each candidate won
-# 4. The percentage of votes each candidate won
-# 5. The winner of the election base on popular vote
 
 
 
 
 
 
-# Write the data
-# use the open statement to open the file as a text file
-with open(file_to_save, "w") as txt_file:
-    # Write some data to the file
-    txt_file.write("Counties in the Election\n-----------------------\nArapahoe\nDenver\nJefferson")
+
+
+
