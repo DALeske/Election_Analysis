@@ -46,9 +46,9 @@ The analysis of the election show that:
     - Diana DeGette, who received 73.8% (272,892) of the total number of votes
 
 ## Election Audit Summary
-It has been a pleasure to conduct this election audit on behalf of the Colorado Board of Elections. Please keep Leske Audits in mind for future elections. The services and scripts provided are provide flexibility to analyze election data compiled from multiple modalities. The process is scalable to as many counties as desired.  
+It has been a pleasure to conduct this election audit on behalf of the Colorado Board of Elections. Please keep Leske Audits in mind for future elections. The services and scripts provided allow flexibility to analyze election data compiled from multiple modalities. The process is scalable to as many counties as desired.  
 
-The audit that was conducted at your request was a based on a single election ballot. Should your needs require it, the process we use can be modified to summarize results from any number of elections on a ballot. Simply provide your election results in csv format (ballot_ID, county, candidate_01, candidate_02, candidate_03, ...). In addition, should you require election results summarized by district within county, that service can also be provided. A simple modification to your election results in csv format will suffice (ballot_ID, county, district, candidate_01, candidate_02, candidate_03, ...). I think you will find our fees to be reasonable and competitive.
+The audit that was conducted at your request was a based on a single election ballot. Should your needs require it, the process used can be modified to summarize results from any number of elections on a ballot. Simply provide your election results in csv format (ballot_ID, county, candidate_01, candidate_02, candidate_03, ...). In addition, should you require election results summarized by district within county, that service can also be provided. A simple modification to your election results in csv format will suffice (ballot_ID, county, district, candidate_01, candidate_02, candidate_03, ...). I think you will find our fees to be reasonable and competitive.
 
 Again, it was a pleasure to be of service. Please feel free to contact me directly for any future auditing needs.
 
