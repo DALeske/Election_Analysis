@@ -59,3 +59,10 @@ Best regards,
 David Leske
 Leske Audits, LLC
 
+## Appendix
+
+### Terminal Output
+
+The following is a display of the terminal output:
+
+![PyPoll Terminal Output](https://github.com/DALeske/Election_Analysis/blob/main/Resources/PyPoll_Challenge_Terminal.png)
