@@ -45,7 +45,7 @@ The analysis of the election show that:
 - The winner of the election based on popular vote was:
     - Diana DeGette, who received 73.8% (272,892) of the total number of votes
 
-Downloadable Results are available [here](https://github.com/DALeske/Election_Analysis/blob/main/analysis/election_analysis.txt)
+Results in a text file format are available [here](https://github.com/DALeske/Election_Analysis/blob/main/analysis/election_analysis.txt)
  
 ## Election Audit Summary
 It has been a pleasure to conduct this election audit on behalf of the Colorado Board of Elections. Please keep Leske Audits in mind for future elections. The services and scripts provided allow flexibility to analyze election data compiled from multiple modalities. The process is scalable to as many counties as desired.  
